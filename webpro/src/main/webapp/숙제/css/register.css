@@ -1,0 +1,20 @@
+@charset "UTF-8";
+h2{
+	text-align: center;
+}
+form{
+	margin : 30px auto;
+	padding : 30px;
+	width : 60%;
+}
+label{
+	display : inline-block;
+ 	width :100px;
+ 	height: 40px;
+}
+.bu{
+	width: 40%;
+}
+fieldset{
+	border : 2px dotted gray; 
+}

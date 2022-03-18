@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+	function proc1() {
+		//주민번호 입력 - 110326-4123456
+		input = prompt("주민등록번호 입력: ex) 110326-4123456");
+		//추출하기 11, 03, 26 
+		year = parseInt(input.substr(0, 2));
+		month = parseInt(input.substr(2, 2));
+		day = parseInt(input.substr(4, 2));
+		gendernum = parseInt(input.charAt(7));
+
+		if (gendernum == 3 || gendernum == 4) {
+			birth = 2000 + year;
+		} else {
+			birth = 1900 + year;
+		}
+		if (gendernum == 1 || gendernum == 3) {
+			sex = "남성";
+		} else {
+			sex = "여성";
+		}
+		day1 = new Date();
+		today = day1.getFullYear();
+		age = today - birth
+		out = "주민등록번호: " + input.slice(0, 8) + "*******" + "<br>";
+		out += "생년월일 : " + birth + "년 " + month + "월 " + day + "일<br>";
+		out += "성별 : " + sex + "<br>";
+		out += "나이 : " + age;
+
+		document.getElementById('result1').innerHTML = out;
+	}
+	function proc2() {
+		input = prompt("주민등록번호 입력: ex) 110326-4123456");
+		arr = input.replace("-", "").split("", 12);
+		sum = 0;
+		lastnum = parseInt(input.charAt(13));
+		multi = [ 2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5 ];
+
+		for (let i = 0; i < arr.length; i++) {
+			sum += arr[i] * multi[i];
+		}
+	
+		result = 11 - (sum % 11);
+									
+		result = reulst % 10;
+		
+		if (result == lastnum) {
+			res = "true";
+		} else {
+			res = "false";
+		}
+		out = "주민등록번호: " + input.slice(0, 8) + "*******" + "<br>";
+		out += "유효성 결과 : " + res
+		document.getElementById('result2').innerHTML = out;
+
+	}
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<pre>
+	주민등록번호를 입력 받아 생년월일과 성별을 출력하는 프로그램을 작성하시오.
+	(입력은 prompt로 입력받는다.)
+</pre>
+		<input type="button" value="확인" onclick="proc1()">
+		<div id="result1"></div>
+	</div>
+
+	<div class="box">
+		<pre>
+	주민등록번호를 입력 받아
+	 주민등록번호의 유효성을 검사하는 프로그램을 작성하시오.
+</pre>
+		<input type="button" value="확인" onclick="proc2()">
+		<div id="result2"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+	function proc(){
+		var in1 = parseInt(prompt("정수1 입력"));
+		var in2 = parseInt(prompt("정수2 입력"));
+		var hap = in1 + in2;
+		
+	/* 	str = "입력1 : " + in1 + "\n";
+		str += "입력2 : "+ in2 +"\n";
+		str += "덧셈 : " + hap;
+		alert(str);
+	 */	
+		// div를 검색
+	var vd = document.querySelector("div");
+		
+	str = "입력1 : " + in1 + "<br>";
+	str += "입력2 : "+ in2 +"<br>";
+	str += "덧셈결과 : " + hap;
+	vd.innerHTML = str; 
+		}
+	function calc(abc){
+		// 두수를 입력
+		var in1 = parseInt(prompt("정수1 입력"));
+		var in2 = parseInt(prompt("정수2 입력"));
+		//abc의 값을 비교 
+		var res;
+		switch(abc){
+		case '+': res = in1+in2; break; 
+		case '-': res = in1-in2; break; 
+		case '*': res = in1*in2; break; 
+		case '/': res = in1/in2; break; 
+		}
+		/* str = "입력1: "+ in1 +"<br>";
+		str += "입력2: "+ in2 +"<br>";
+		str += in1 + abc + in2 + " ="+res;		 */
+		str=`입력1: ${in1} <br> 입력2: ${in2} <br> ${in1} ${abc} ${in2} = ${res}`;
+		var vd = document.querySelector("#res");
+		vd.innerHTML = str; 
+	}
+</script>
+
+</head>
+<body>
+<pre>
+	버튼을 클릭하면 두 개의 수를 입력한다. (prompt이용) 
+	prompt함수 의 리턴 결과값은 String이다. 
+	두 수를 더해서 출력한다. - div요소에 출력한다.
+	더하기 위해서 정수로 변환이 필요하다. - parseInt()
+	
+	요소 검색 - es6 - 단수로 검색 - 여러개가 있어도 첫번째 요소만 검색
+	document.querySelector("#aa")
+	document.querySelector(".bb")
+	document.querySelector("div")
+</pre>	 
+<input type="button" value="확인" onclick="proc()">
+<br>
+<div id="d1"></div>
+<hr>
+<input type="button" value="+" onclick="calc('+')">
+<input type="button" value="-" onclick="calc('-')">
+<input type="button" value="*" onclick="calc('*')">
+<input type="button" value="/" onclick="calc('/')">
+<div id="res"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+function proc1(){
+	
+	//스타일로 설정된 테두리를 지운다. 
+	
+	//시작버튼 감추기 - 더이상 클릭하지 못하도록 
+	
+	
+	//result1을 검색 
+	vres1 = document.getElementById('result1');
+	
+	//1초마다 한번씩 
+	a = 1초마다 한번씩 {
+	//첫번째 자식을 선택
+	child = vres1.fistChlid
+	//마지막 자식으로 추가 
+	
+	vres1.appendChild(child);
+	}
+}
+function stop(){
+	//시작버튼 보이기 
+	
+	//랜덤발생 - 0~이미지 개수만큼 
+	
+	//랜덤 발생된 번째 자식이미지에 스타일로 테두리를 설정한다.
+	
+	//회전을 멈춘다. 
+	
+}
+</script>
+</head>
+<body>
+
+<div class="box">
+<pre>
+	firstChild를 통해 첫번째 자식을 선택하고 
+	appendChild()로 추가;
+	첫번째 자식은 없어져야 한다. 
+
+	result1의 첫번째 자식(img)을 선택한다. 
+	선택한 자식을 맨 마지막 자식으로 추가한다(appendChild())
+
+	appendChild() 수행시 기존의 존재하는 요소를 대상으로 
+	작업시 이동의 효과가 있다. (잘라내기 - 붙여넣기);
+	  
+</pre>
+<input type="button" value="시작" onclick="proc1()">
+<input type="button" value="종료" onclick="proc1()">
+<div id="result1"></div>
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+</div>
+</body>
+</html>

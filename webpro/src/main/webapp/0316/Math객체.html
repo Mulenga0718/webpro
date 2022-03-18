@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script type="text/javascript">
+rand = parseInt(Math.random()*100+1);
+count = 0;
+array = new Array();
+function proc1(){
+
+	//입력한 값을 가져온다. 
+	input = parseInt(document.getElementById('number').value);
+	
+	
+	//rand 와 비교 
+	if(rand == input){
+		hint = "정답입니다.";	
+	}else if(rand > input){
+		hint = "더 큰수로 입력하세요.";
+	}else{
+		hint = "더 작은수로 입력하세요.";
+	}
+	
+	//출력 = result1에 hint를 출력
+	document.getElementById('result1').innerHTML = hint;
+}
+function proc2(){
+	
+	count++;
+	//누적변수 선언 
+	
+	input = parseInt(document.getElementById('number2').value);
+	
+	//가져온 값을 문자로 누적한다. 
+	array.push(input); 
+	
+	if(rand == input){
+		hint = "정답입니다.";	
+	}else if(rand > input){
+		hint = "더 큰수로 입력하세요.";
+	}else{
+		hint = "더 작은수로 입력하세요.";
+	}
+	document.getElementById('result2').innerHTML = hint+"<br>";
+	if(hint == "정답입니다."){
+	out = "결과 : "+hint+"<br>"; 
+	out +="입력값: "+array.join().replace(","," ")+"<br>"; 
+	out += "횟수 : "+count; 
+	
+	document.getElementById('result2').innerHTML += out;
+	}
+}
+function proc3(){
+	//배열 선언 
+	arr = ["가위", "바위", "보"];
+	com = Math.random()*3;
+	
+	user = prompt("가위 ! 바위! 보 > ");
+	
+	switch(user){
+	case "가위" : usernum = 0; break;
+	case "바위" : usernum = 1; break;
+	case "보" : usernum = 2; break;
+	}
+	
+	switch(Math.abs(usernum-com)){
+	case 0: result = "비겼습니다."; break;
+	case 1: result = "당신이 이겼습니다."; break;
+	case 2: result = "당신이 졌습니다."; break;
+	}
+	
+	out = "컴퓨터 결과 : "+arr[com];
+	out += "user 결과 : "+user;
+	out += "결과: " +  result;
+	
+	document.getElementById('result3').innerHTML = out;
+}
+
+	</script>
+</head>
+<body>
+
+<div class="box">
+<pre>
+	1부터 100까지의 랜덤을 발생한다. 
+	랜덤수를 알아 맞추는 프로그램
+	랜덤수와 입력한 수를 비교하여 힌트를 제공 한다.  
+</pre>
+</h1> Number Guest</h1>
+<p>1부터 100 사이의 숫자를 입력하시오.</p>
+<input id="number" type="text">
+<input type="button" value="확인" onclick="proc1()">
+<div id="result1"></div>
+</div>
+
+<div class="box">
+<pre>
+1부터 100까지의 랜덤을 발생한다. 
+	랜덤수를 알아 맞추는 프로그램
+	랜덤수와 입력한 수를 비교하여 힌트를 제공 한다.  
+	
+	입력횟수 구하기 - 몇번만에 수를 맞췄나? 
+	입력한 수를 나열하기 - 문자로 누적하여 나열 
+</pre>
+</h1> Number Guest</h1>
+<p>1부터 100 사이의 숫자를 입력하시오.</p>
+<input id="number2" type="text">
+<input type="button" value="확인" onclick="proc2()">
+<div id="result2"></div>
+</div>
+
+<div class="box">
+<pre>
+	가위 바위 보 게임을 할 수 있는 프로그램.
+	(단, 컴퓨터는 랜덤(0~2)을 이용하고, 
+	사용자는 prompt로 입력 받아서 처리)
+</pre>
+<input type="button" value="확인" onclick="proc3()">
+<div id="result3"></div>
+</div>
+</body>
+</html>

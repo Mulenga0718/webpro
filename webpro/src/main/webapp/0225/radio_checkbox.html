@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+form{
+ 	border : 1px solid blue;
+ 	margin : 30px;
+ 	padding : 30px;
+ 	width : 50%;
+ }
+
+</style>
+</head>
+<body>
+<h1> &lt;input type="radio"></h1>
+<form action = "radio.jsp" method ="post">
+	<label>성별</label>
+	<input type ="radio" name="gender" value="남자">남성
+	<input type ="radio" name="gender" value="여자">여성<br>
+	
+
+	<input type ="submit" value="전송">
+</form>
+
+<h1> &lt;input type="checkbox"></h1>
+<form action = "checkbox.jsp" method ="post">
+	<label>성별</label><br>
+	<input type ="checkbox" name="food" value="떡볶이" checked>떡볶이
+	<input type ="checkbox" name="food" value="닭갈비">닭갈비
+	<input type ="checkbox" name="food" value="소고기">소고기
+	<input type ="checkbox" name="food" value="삼겹살">삼겹살
+	<input type ="checkbox" name="food" value="오리고기">오리고기
+	<input type ="checkbox" name="food" value="치맥">치맥<br><br>
+	
+
+	<input type ="submit" value="전송">
+	<input type ="reset">
+</form>
+</body>
+</html>

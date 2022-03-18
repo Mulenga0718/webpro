@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<style>
+body{
+	min-width : 700px;
+}
+.round{
+	margin-bottom: 5px;
+	border-radius: 30px;
+	border: 1px solid gold;
+	box-sizing: border-box; 
+}
+header{
+	width: 100%;
+	height: 120px;
+	background: #B8D7FF;
+	float: header;
+}
+nav{
+	width: calc(30% - 1%);
+	height: 400px;
+	padding : 10px;
+	background: #FFBEC3;
+	float: left;
+}
+section{
+	width: calc(70% - 1%);
+	height: 400px;
+	background: #5BFFB0;
+	padding: 5px;
+	float: right;
+}
+footer{
+	width: 100%;
+	height: 60px;
+	background:	#C45FDD;
+	float: footer;
+	clear: both;
+}
+img{
+	width:150px;
+	height: 120px;
+}
+div{
+	border: 3px dashed #0A6E0A;
+	background: #369F36;
+	border-radius: 30px;
+	margin: 15px 7px;
+	padding: 10px;
+	background-clip: content-box;
+}
+
+h2, #p1{
+	text-align: center;
+}
+#p4{
+	text-align: center;
+}
+a{
+	text-decoration-line: none;
+}
+a:visited {
+	color: yellow;
+}
+a:hover{
+	background-color: lightskyblue;
+	color: white;
+}
+#p1,#p2, #p3{
+	font-family: 'Dancing Script', cursive;
+}
+#p4{
+	font-style : italic;
+}
+h3, h2, a{
+	font-family: 'Black Han Sans', sans-serif;
+}
+#p5 ,figcaption{
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+}
+</style>
+</head>
+<body>
+<header class="round">
+<h2>My Blog Page</h2>
+<p id="p1">시멘틱 태그로 만들어진 페이지 입니다.</p>
+</header>
+<nav class="round">
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.w3schools.com/">w3schools</a></li>
+<li><a href="https://www.naver.com/">Naver</a></li>
+<li><a href="https://www.daum.net/">Daum</a></li>
+<p id="p5"><img src="../images/spongebob.png" alt="spongebob.png">
+<figcaption>스폰지밥</figcaption></p>
+</ul>
+</nav>
+<section class="round">
+<div>
+<h3>Sematic Tag</h3>
+<p id="p2">시멘틱 요소(Semantic elements)들은 브라우저에게 요소의 의미나 목적을 명확하게 알려주는 요소이다.
+ 레이아웃을 만들때 쓰는 것. 의미가 있는 요소라면 div보다는 시멘틱 태그를 사용해준다.</p>
+</div>
+<div>
+<h3>div와 span</h3>
+<p id ="p3">div은 "divide"의 약자로서 페에지를 논리적인 세션으로 분리하는데 사용되는 태그이다.
+ span요소는 인라인 요소로서 텍스트를 위한 컨테이너로 사용할 수 있다. </p>
+</div>
+</section>
+<footer class="round">
+<p id= "p4">Copyright (c)2019 Hong</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="UTF-8">
+		<title> </title>
+		<style>
+			table{
+			border : 2px solid hotpink;
+			margin : 50px auto;
+			}
+			td{
+			width :200px;
+			height : 50px;
+			text-align : center;
+			}
+			th{
+			height : 70px;
+			}
+			caption{
+			font-size : 2em;
+			margin : 30px auto;
+			caption-side: bottom;
+			}
+			#table2{
+			border : 5px double purple;
+			margin : 50px auto;
+			border-collapse : collapse;
+			}
+			#table2 td{
+				width : 150px;
+				height : 80px;
+			}
+			#table2 caption{
+			font-size : 2em;
+			margin : 30px auto;
+			caption-side: top;
+			}
+		</style>
+	</head>
+	<body>
+	<table border = "1">
+	<caption>행열 병합</caption>
+		<tr>
+			<th>1열</th>
+			<th>2열</th>
+			<th>3열</th>
+		</tr>
+		<tr>
+			<td rowspan = "2">1행 1열</td>
+			<td>1행 2열</td>
+			<td>1행 3열</td>
+		</tr>
+		<tr>
+			<td>2행 2열</td>
+			<td>2행 3열</td>
+		</tr>
+		<tr>
+			<td colspan = "3">3행 1열</td>
+		</tr>
+		</table>
+		
+		<table border = "1" id ="table2">
+			<caption> 테이블 연습 2 </caption>
+			<tr>
+				<td colspan ="2"></td>
+				<td colspan ="2"></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan ="4"></td>
+				<td colspan ="2"></td>
+			</tr>
+			<tr>
+				<td colspan ="4"></td>
+				<td colspan ="2" rowspan ="2"></td>
+			</tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			<tr>
+			
+			</tr>
+		</table>
+	
+	</body>
+
+</html>
